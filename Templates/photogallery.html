@@ -1,0 +1,83 @@
+{% extends "layout.html" %} {% block main %}
+
+<!-- Project Area Start -->
+<div class="gallery_area clearfix">
+    <div class="container-fluid clearfix">
+        <div class="gallery_menu">
+            <div class="portfolio-menu">
+                <button class="active btn" type="button" data-filter="*">All</button>
+                <button class="btn" type="button" data-filter=".bridal">Bridal Makeup</button>
+                <button class="btn" type="button" data-filter=".reception">Reception Makeup</button>
+                <button class="btn" type="button" data-filter=".sider">Sider Makeup</button>
+                <button class="btn" type="button" data-filter=".western">Western Makeup</button>
+                <button class="btn" type="button" data-filter=".videos">Videos</button>
+            </div>
+        </div>
+
+        <div class="row portfolio-column">
+            {% for data in photo_gallery if data.category=="bridal-makeup" %}
+            <!-- Single Item pgb1-->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-3 column_single_gallery_item bridal">
+
+                <img src="{{ data.fileUrl}}" alt="">
+                <div class="hover_overlay">
+                    <a class="gallery_img" href="{{ data.fileUrl}}"><i class="fa fa-eye"></i></a>
+                </div>
+
+            </div>
+            {% endfor %} {% for data in photo_gallery if data.category=="reception-makeup" %}
+            <!-- Single Item pgr1-->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item reception">
+
+
+                <img src="{{ data.fileUrl}}" alt="">
+                <div class="hover_overlay">
+                    <a class="gallery_img" href="{{ data.fileUrl}}"><i class="fa fa-eye"></i></a>
+                </div>
+
+            </div>
+            {% endfor %} {% for data in photo_gallery if data.category=="sider-makeup" %}
+            <!-- Single Item pgs1-->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item sider">
+
+                <img src="{{ data.fileUrl}}" alt="">
+                <div class="hover_overlay">
+                    <a class="gallery_img" href="{{ data.fileUrl}}"><i class="fa fa-eye"></i></a>
+                </div>
+
+
+            </div>
+            {% endfor %} {% for data in photo_gallery if data.category=="western-makeup" %}
+            <!-- Single Item pgw1-->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item western">
+
+                <img src="{{ data.fileUrl}}" alt="">
+                <div class="hover_overlay">
+                    <a class="gallery_img" href="{{ data.fileUrl}}"><i class="fa fa-eye"></i></a>
+                </div>
+
+            </div>
+            {% endfor %}
+            <!-- Single Item pgv1-->
+            {% for data in photo_gallery if data.category=="videos" %}
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  column_single_gallery_item videos">
+                <img src="{{ data.fileUrl}}" alt="">
+                <div class="hover_overlay">
+                    <a href="{{ data.link}}" target="_blank" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                </div>
+
+            </div> {% endfor %}
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center mt-70">
+                <a href="#" class="btn studio-btn"><img src="{{ url_for('static', filename='img/core-img/logo-icon.png')}}" alt=""> Load More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project Area End -->
+
+
+
+{% endblock %}

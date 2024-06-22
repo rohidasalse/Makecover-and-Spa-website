@@ -1,0 +1,33 @@
+{
+    "params": {
+        "local_server": "True",
+        "local_url": "mysql://root:@localhost/anvi-spa",
+
+        "mainTitle": "MemerKida",
+        "author": "memer-kida",
+        "phone": "7666230646",
+        "address": "Yavatmal, MH, 445001",
+        "copyright": "memer-kida.dev",
+        "favTitle": "memer-kida",
+        "brandName": "memer-kida",
+
+        "gmail_user": "22devendrabijwe@gmail.com",
+        "gmail_pswd": "lyjmgtiewkytgwyo",
+        "admin_username": "Admin",
+        "admin_password": "Admin@123"
+
+
+
+    },
+    "social": {
+        "tw_url": "https://twitter.com/_memer_kida",
+        "fb_url": "https://www.facebook.com",
+        "ig_url": "https://www.instagram.com/memer_kida_official/",
+        "gh_url": "https://github.com/Devbijwe"
+    }
+
+    ,
+    "directories": {
+
+    }
+}

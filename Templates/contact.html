@@ -1,0 +1,137 @@
+
+
+
+{% extends "layout.html" %}
+
+<!-- {% block main %} -->
+
+
+
+<section class="contact-area section_padding_100 mt-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="contact-heading-text text-center mb-100">
+                    <span></span>
+                    <h2>Please get in touch with us</h2>
+                    <p>Thank you for visiting our website! We appreciate your interest in our services and would love to hear from you. Whether you have a question, feedback, or would like to discuss a potential collaboration, we're here to assist. <br>                        At Anvi Makeover & Spa, we prioritize clear and open communication with our valued visitors. We strongly believe that every interaction is an opportunity to build a meaningful relationship and provide excellent customer service.
+                        That's why we encourage you to get in touch with us through any of the following channels: </p>
+                </div>
+            </div>
+            <!-- Contact Form Area -->
+
+
+
+
+
+
+
+
+
+            
+
+            <div class="col-10">
+                <div class="contact-form-area">
+                    <form action="#" method="post" id="contact-form" name="submit-to-google-sheet">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <input type="text" class="form-control" name="Name" placeholder="Your Name">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <input type="email" class="form-control" name="Email" placeholder="Your Email">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <input type="text" class="form-control" name="Subject" placeholder="Subject">
+                            </div>
+                            <div class="col-12">
+                                <textarea name="Message" class="form-control" cols="30" rows="10" placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn studio-btn mt-3"><img src="{{ url_for('static', filename='img/core-img/logo-icon.png')}}" alt="mailto:anvimakeover2022@gmail.com"> Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Google Maps -->
+<div class="map-area">
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-10">
+                <div id="googleMap" style="margin-top:30px;margin-left: 75px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.9654415606124!2d78.11912147469756!3d20.384314709601853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd3e92446c78ac1%3A0x3e87a331ff813252!2sAnvi%20Makeover%2C%20Ladies%20Beauty%20Parlour%2C%20Beauty%20%26%20Makeup%20Academy%20in%20Yavatmal!5e0!3m2!1sen!2sin!4v1704874850395!5m2!1sen!2sin" width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+
+                <!-- Contact Info -->
+                <div class="contact-core-info d-flex align-items-center wow fadeInLeftBig" data-wow-delay="1s" data-wow-duration="1000ms">
+                    <div class="contactInfo">
+                        <img src="{{ url_for('static', filename='img/core-img/logo.png')}}" alt="" width="100px">
+                        <!-- Single Footer Content -->
+                        <div class="single-footer-content">
+                            <img src="{{ url_for('static', filename='img/core-img/map.png')}}" alt="">
+                            <a href="#">Near Himalaya Bajaj Showroom, In-front of MITHAS, Arni Road, Yavatmal.</a>
+                        </div>
+                        <!-- Single Footer Content -->
+                        <div class="single-footer-content">
+                            <img src="{{ url_for('static', filename='img/core-img/smartphone.png')}}" alt="">
+                            <a href="#">+91 962 304 8864</a>
+                        </div>
+                        <!-- Single Footer Content -->
+                        <div class="single-footer-content">
+                            <img src="{{ url_for('static', filename='img/core-img/envelope-2.png')}}" alt="">
+                            <a href="#">anvimakeover2022@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Follow Me Instagram Area Start -->
+<section class="follow-me-instagram-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-11 ml-auto">
+                <div class="follow-me-title">
+                    <h5><a href="https://www.instagram.com/anvi_makeover_spa" target="_blank"><b>Follow me on Instagram @anvi_makeover_spa</a></h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Instagram Feeds Area -->
+    <div class="instagram-feeds-area owl-carousel">
+        {% for data in insta_posts %}
+        <div class="single-instagram-feeds">
+            <img src="{{ data.fileUrl }}" alt="">
+            <a href="{{ data.link }}" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<!-- Follow Me Instagram Area End -->
+
+<!-- Google Maps -->
+
+<!-- 
+<script src="<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14959.86678197558!2d78.11145863424784!3d20.384263011840396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd3e92446c78ac1%3A0x3e87a331ff813252!2sAnvi%20Makeover%20%26%20Spa%2C%20Beauty%20%26%20Makeup%20Academy!5e0!3m2!1sen!2sin!4v1685204842587!5m2!1sen!2sin' 
+width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>">
+</script>
+<script src="{{ url_for('static', filename='js/map-active.js')}}"></script>
+
+
+ -->
+
+{% endblock %}

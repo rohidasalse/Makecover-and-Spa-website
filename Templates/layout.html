@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>{{main_title}}</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="{{ url_for('static', filename='img/core-img/favicon.ico') }}">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/core-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Responsive CSS -->
+    <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="showbox">
+            <div class="loader">
+                <svg class="circular" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                </svg>
+            </div>
+        </div>
+        <div class="questions-area text-center">
+            <p>Did you know?</p>
+            <ul>
+                <li>“There are no rules in makeup. If there were, I’d break them anyway.”</li>
+                <li>“I love the confidence that makeup gives me.”</li>
+                <li>“Creativity is your best makeup skill, don’t be afraid to experiment.”</li>
+                <li>“Makeup is not a mask that covers up your beauty; it’s a weapon that helps you express who you are from the inside.” </li>
+                <li>“The best thing is to look natural, but it takes makeup to look natural.” </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Gradient Background Overlay -->
+    <div class="gradient-background-overlay"></div>
+
+    <!-- Header Area Start -->
+    {% if  no_header_img %}
+    <header class="header-area">
+        {% else %}
+    <header class="header-area  bg-img" style="background-image: url(static/img/bg-img/14.jpg);">
+        {% endif %}
+
+        <div class="container-fluid h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 h-100">
+                    <div class="main-menu h-100">
+                        <nav class="navbar h-100 navbar-expand-lg">
+                            <!-- Logo Area  -->
+                            <a class="navbar-brand" href="{{url_for('home')}}"><img src="{{ url_for('static', filename='img/core-img/logo.png') }}" alt="Logo"></a>
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#studioMenu" aria-controls="studioMenu" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i> Menu</button>
+
+                            <div class="collapse navbar-collapse" id="studioMenu">
+                                <!-- Menu Area Start  -->
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="{{url_for('home')}}">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{{url_for('bridal_makeup')}}">Bridal Makeup & Pre-Bride</a>
+                                            <a class="dropdown-item" href="{{url_for('facial_skin')}}">Facial & Skin Treatments</a>
+                                            <a class="dropdown-item" href="{{url_for('hair_spa')}}">Hair Spa & Hair Treatments</a>
+                                            <a class="dropdown-item" href="{{url_for('bodyspa_dtan')}}">Body Spa & D-tan</a>
+                                            <a class="dropdown-item" href="{{url_for('haircur_haircolor')}}">Haircut &Hair Colour</a>
+                                            <a class="dropdown-item" href="{{url_for('menucure_pedicure')}}">Manicure & Pedicure</a>
+                                            <a class="dropdown-item" href="{{url_for('keratin_smoothing')}}">Keratin, Smoothing &Rebonding</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{url_for('photo_gallery')}}">Photo Gallery</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{url_for('testimonial')}}">Testimonial</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{url_for('about')}}">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{url_for('contact')}}">contact</a>
+                                    </li>
+                                </ul>
+
+                                <!-- Search Form -->
+                                <div class="header-search-form ml-auto">
+                                    <form action="#">
+                                        <input type="search" class="form-control" placeholder="Input your keyword then press enter..." id="search" name="search">
+                                        <input class="d-none" type="submit" value="submit">
+                                    </form>
+                                </div>
+                                <!-- Search btn -->
+                                <!--<div id="searchbtn">
+                                    <img src="img/core-img/search.png" alt="">
+                                </div>-->
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Social Sidebar Area Start -->
+    <div class="social-sidebar-area bg-white">
+        <!-- Social Area -->
+        <div class="social-info-area">
+            <a href="https://www.facebook.com/profile.php?id=100089041885679&mibextid=ZbWKwL" target="_blank" data-toggle="tooltip" data-placement="right" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i> <span>Facebook</span></a>
+            <a href="https://www.instagram.com/anvi_makeover_spa" target="_blank" data-toggle="tooltip" data-placement="right" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i> <span>Instagram</span></a>
+            <a href="https://wa.me/message/LHVRKMVIN7VXE1" target="_blank" data-toggle="tooltip" data-placement="right" title="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span>WhatsApp</span></a>
+            <a href="https://www.google.com/maps/place/Anvi+Makeover+%26+Spa,+Beauty+%26+Makeup+Academy/@20.3842482,78.1191835,17z/data=!4m18!1m9!3m8!1s0x3bd3e92446c78ac1:0x3e87a331ff813252!2sAnvi+Makeover+%26+Spa,+Beauty+%26+Makeup+Academy!8m2!3d20.3842432!4d78.1217584!9m1!1b1!16s%2Fg%2F11rq8c6vx3!3m7!1s0x3bd3e92446c78ac1:0x3e87a331ff813252!8m2!3d20.3842432!4d78.1217584!9m1!1b1!16s%2Fg%2F11rq8c6vx3?hl=en-US&entry=ttu"
+                target="_blank" data-toggle="tooltip" data-placement="right" title="Google Review"><i class="fa fa-google" aria-hidden="true"></i> <span>Review</span></a>
+        </div>
+        <!-- Message Box -->
+        <!--<div class="message-box">
+            <a href="#" data-toggle="modal" data-target=".contact-modal-lg"><img src="img/core-img/envelope.png" alt=""></a>
+        </div>-->
+    </div>
+    <!-- Social Sidebar Area End -->
+
+    {% block main %} {% endblock %}
+
+
+
+
+    <!-- ***** Contact Area Start ***** -->
+    <div class="contact-popup-form" id="contact-modal-lg">
+        <div class="modal fade contact-modal-lg" tabindex="-1" role="dialog" aria-labelledby="contact-modal-lg" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="contact-heading-text text-center mb-30">
+                                    <span></span>
+                                    <h2>Please get in touch</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact Form Area -->
+                    <div class="contact-form-area">
+                        <div class="container-fluid">
+                            <form action="#" method="post" id="contact-form" name="submit-to-google-sheet">
+                                <div class="row">
+                                    <div class="col-12 col-md-4">
+                                        <input type="text" class="form-control" name="Name" placeholder="Your Name">
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <input type="email" class="form-control" name="Email" placeholder="Your Email">
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <input type="text" class="form-control" name="Subject" placeholder="Subject">
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea name="Message" class="form-control" cols="30" rows="10" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn studio-btn mt-3"><img src="{{ url_for('static', filename='img/core-img/logo-icon.png') }}" alt=""> Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ***** Contact Area End ***** -->
+    <div class="" style="position: fixed; right: 25px; top: 100px; z-index: 50;" id="alerts">
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+        <div class="alert alert-primary bg-primary text-light border-0 alert-dismissible fade show" role="alert">
+            {{message}}
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+    </div>
+    {% if show_footer %}
+    <!-- Footer Area Start -->
+    <footer class="footer-area">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100">
+                    <div class="footer-content h-100 d-md-flex align-items-center justify-content-between">
+                        <!-- Single Footer Content -->
+                        <div class="single-footer-content">
+                            <img src="{{ url_for('static', filename='img/core-img/map.png')}}" alt="">
+                            <a href="https://maps.app.goo.gl/Z4FJnNxgSMN9hqXj6" target="_blank">Near Himalaya Bajaj Showroom, In-front of MITHAS, Arni Road, Yavatmal.</a>
+                        </div>
+                        <!-- Single Footer Content -->
+                        <div class="single-footer-content">
+                            <img src="{{ url_for('static', filename='img/core-img/smartphone.png')}}" alt="">
+                            <a href="#">+91 962 304 8864</a>
+                        </div>
+                        <!-- Single Footer Content -->
+                        <div class="single-footer-content">
+                            <img src="{{ url_for('static', filename='img/core-img/envelope-2.png')}}" alt="">
+                            <a href="mailto:anvimakeover2022@gmail.com" target="_blank">anvimakeover2022@gmail.com</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    <!-- <p>Copyright &copy;
+        <script>
+            document.write(new Date().getFullYear());
+        </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p> -->
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    {% endif %}
+
+
+    <script src="{{ url_for('static', filename='js/jquery/jquery-2.2.4.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/active.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+
+</body>
+
+</html>

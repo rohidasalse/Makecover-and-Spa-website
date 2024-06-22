@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% block main %}
+<!-- ***** Welcome Area Start ***** -->
+<section class="welcome-area">
+    <div class="carousel h-100 slide" data-ride="carousel" id="welcomeSlider">
+        <!-- Carousel Inner -->
+        <div class="carousel-inner h-100">
+            {% for item in home_slider|sort(attribute='index') %}
+            <div class="carousel-item h-100 bg-img {% if loop.index0 == 0 %}active{% endif %}" style="background-image: url({{ item.fileUrl }});">
+                <div class="carousel-content h-100">
+                    <div class="slide-text">
+                        <span>{{ '%02d'|format(loop.index) }}.</span>
+                        <h2>&nbsp;{{ item.title }}</h2>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Carousel Indicators -->
+        <ol class="carousel-indicators">
+            {% for item in home_slider|sort(attribute='index') %}
+            <li data-target="#welcomeSlider" data-slide-to="{{ loop.index0 }}" class="{{ 'active' if loop.index0 == 0 else '' }} bg-img" style="background-image: url({{ item.fileUrl }});"></li>
+            {% endfor %}
+        </ol>
+    </div>
+</section>
+<!-- ***** Welcome Area End ***** -->
+{% endblock %}
