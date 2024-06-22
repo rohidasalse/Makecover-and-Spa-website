@@ -24,6 +24,6 @@ Discount**](https://themewagon.com/themes/mega-discount-bundle/) - A bundle of 2
 
   #ouput
   
-* [**Mega ![Avani_spa](https://github.com/rohidasalse/Makecover-and-Spa-website/assets/96672089/f6b6fba7-98b7-486d-9535-0513f448d5e0)
+   ![Avani_spa](https://github.com/rohidasalse/Makecover-and-Spa-website/assets/96672089/f6b6fba7-98b7-486d-9535-0513f448d5e0)
 
 
